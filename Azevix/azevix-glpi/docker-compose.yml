@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  db:
+    image: mariadb:10.11.3
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    env_file:
+      - .env
+
+  glpi:
+    image: diouxx/glpi:10.0.7
+    ports:
+      - "80:80"
+    volumes:
+      - ./glpi-data:/var/www/html/glpi
+    env_file:
+      - .env

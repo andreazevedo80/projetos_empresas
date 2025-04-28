@@ -1,0 +1,24 @@
+# Ignorar pastas .vagrant
+Azevix/azevix-website/.vagrant/
+Azevix/azevix-zabbix/.vagrant/
+Azevix/azevix-glpi/.vagrant/
+
+# Ignorar pasta .vs
+Azevix/azevix-website/.vs/
+Azevix/azevix-zabbix/.vs/
+Azevix/azevix-glpi/.vs/
+
+# Ignorar arquivo .env
+Azevix/azevix-glpi/.env
+Azevix/azevix_zabbix/.env
+Azevix/azevix-website/.env
+
+# Ignorar arquivos (Boas Práticas)
+GLPI.txt
+*.log
+*.env
+.DS_Store
+*.swp
+.idea/
+.vscode/
+node_modules/
