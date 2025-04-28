@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    # Usando a box padrão do Ubuntu
+    config.vm.box = "ubuntu/bionic64"
+  
+    # Configurando a rede para usar o IP do host
+    config.vm.network "forwarded_port", guest: 80, host: 80
+  
+    # Sincronizando a pasta do projeto no host com a máquina virtual
+    config.vm.synced_folder ".", "/var/www/html", type: "rsync"
+  
+    # Script de provisionamento
+    config.vm.provision "shell", path: "provision.sh"
+  
+    # Customizando a memória e CPU da VM
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+      vb.cpus = 1
+    end
+  end
+  

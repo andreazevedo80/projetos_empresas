@@ -1,0 +1,77 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundo branco */
+    color: #333333; /* Texto em cinza escuro */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #612A91; /* Cor roxa índigo */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Estilo principal */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Layout de grade para os cards */
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo do último card postado */
+.news-item:first-child {
+    grid-column: span 2;
+    background-color: #FFEACE; /* Cor marfim claro */
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.news-item img:hover {
+    transform: scale(1.05);
+}
+
+.news-item h3 {
+    color: #FF8C00; /* Cor laranja-chama */
+    margin-top: 10px;
+}
+
+.news-item p {
+    color: #333333;
+}
+
+.news-item .date {
+    font-size: 0.9em;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.news-item a {
+    color: #612A91;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}

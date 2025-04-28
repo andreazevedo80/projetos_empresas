@@ -1,0 +1,453 @@
+/* styles.css */
+
+/* Importar as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #FF8C00;
+    --cor-secundaria: #612A91;
+    --cor-terciaria: #FFEACE;
+    --cor-branca: #ffffff;
+    --cor-hover: #272727;
+
+    --fonte-cabecalho: 'Montserrat', sans-serif;
+    --fonte-conteudo-titulo: 'Krona One', sans-serif;
+    --fonte-conteudo-texto: 'Montserrat', sans-serif;
+    --fonte-apresentacao-link:'Montserrat', sans-serif;
+    --fonte-apresentacao-link-subtitulo: 'Krona One', sans-serif;
+    --fonte-rodape: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais do body */
+body {
+    background-color: var(--cor-branca); /* Branco */
+    font-family: var(--fonte-conteudo-texto); /* Montserrat */
+    color: var(--cor-secundaria); /* Roxo índigo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o logotipo */
+.logo {
+    width: 150px; /* Tamanho do Logotipo */
+    margin-right: 50px; /* Espaçamento entre o logotipo e o menu */
+}
+
+/* Estilos para o header */
+header {
+    background-color: var(--cor-branca); /* Fundo branco para o header */
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente no centro */
+    justify-content: space-between; /* Alinha itens à esquerda */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+/* Estilos para barra contato */
+
+.navbar-contato {
+    background-color: var(--cor-primaria); /* Cor de fundo da barra de contato */
+}
+
+/* Ajusta a posição dos itens dentro da barra de contato */
+.navbar-contato .container-fluid {
+    display: flex; /* Usa Flexbox para alinhar os itens */
+    justify-content: flex-end; /* Alinha os itens à esquerda */
+}
+
+/* Estiliza os links dentro da barra de contato */
+.navbar-contato .contato-link {
+    color: #ffffff; /* Cor do texto */
+    font-family: var(--fonte-conteudo-texto); /* Fonte Montserrat */
+    font-weight: bold;
+    display: flex; /* Garante que o conteúdo dentro do link seja alinhado corretamente */
+    align-items: center; /* Alinha o texto e a imagem verticalmente */
+    margin-right: 1rem; /* Espaço entre os links */
+}
+
+.navbar-contato .contato-link:hover, .navbar-contato .contato-link:focus {
+    color: var(--cor-secundaria) !important; /* Texto branco ao passar o mouse */
+    background-color: var(--cor-terciaria) !important; /* Roxo índigo ao passar o mouse */
+    font-family: var(--fonte-conteudo-texto) !important; /* Montserrat, sans-serif; */
+    font-weight: bold !important; /* Negrito */
+    font-size: 0.95rem !important;
+ }
+
+.navbar-contato .contato-link img {
+    max-height: 24px; /* Altura máxima das imagens */
+    margin-right: 0.5rem; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilos para o menu */
+.navbar {
+    flex-grow: 1; /* Faz o menu usar o espaço restante */
+}
+
+/* Estilos para o menu suspenso */
+.navbar-nav .nav-link {
+    color: var(--cor-secundaria); /* Texto Roxo índigo */
+    font-family: var(--fonte-conteudo-texto); /* Montserrat, sans-serif; */
+    font-weight: bold; /* Negrito */
+    font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    color: #ffffff; /* Texto branco ao passar o mouse */
+    background-color: var(--cor-secundaria); /* Roxo índigo ao passar o mouse */
+    font-size: 0.95rem;
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* Branco para o fundo do menu suspenso */
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--cor-secundaria); /* Texto Roxo índigo */
+    font-family: var(--fonte-conteudo-texto); /* Montserrat, sans-serif; */
+    font-weight: bold; /* Negrito */
+    font-size: 0.95rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #ffffff; /* Texto branco ao passar o mouse */
+    background-color: var(--cor-secundaria); /* Roxo índigo ao passar o mouse */
+    font-family: var(--fonte-conteudo-texto); /* Montserrat, sans-serif; */
+    font-weight: bold; /* Negrito */
+    font-size: 0.95rem;
+}
+
+/* Estilos para botões */
+button {
+    background-color: var(--cor-primaria); /* Laranja-chama */
+    color: #ffffff; /* Branco para o texto do botão */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Roxo índigo */
+}
+
+/* Estilos para áreas com fundo marfim claro */
+.fundo-marfim {
+    background-color: var(--cor-terciaria); /* Marfim claro */
+}
+
+/* Estilos para imagem*/
+.img-container {
+    position: relative;
+    width: auto; /* Faz com que o contêiner ocupe a largura total do elemento pai */
+    height: auto; /* Ajusta a altura do contêiner para altura da tela */
+}
+
+.img-fundo {
+    width: 100%; /* Ajusta a largura da imagem ao tamanho da tela */
+    height: auto; /* Ajusta a altura da imagem ao tamanho da tela */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner mantendo as proporções */
+    
+}
+
+.text-table {
+    width: auto;
+}
+
+.frase-sobreposta {
+    position: absolute; /* Garante que o texto fique sobre o overlay e a imagem */
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: var(--cor-terciaria) !important; /* Texto branco */
+    font-family: var(--fonte-conteudo-titulo); /* Usando a fonte definida */
+    font-weight: bold; /* Negrito */
+    z-index: 3; /* Coloca o texto da imagem */
+    text-align: center; /* Centraliza o texto */
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    }
+
+.frase-sobreposta h2 {
+    margin: 0; /* Remove a margem padrão para evitar espaçamento indesejado */
+    font-size: 4vw; /* Ajuste responsivo para o tamanho da fonte */
+    }
+
+#palavra-alternada-container {
+    min-width: 220px; /* Ajuste este valor conforme o tamanho das palavras alternadas */
+    text-align: center; /* Centraliza a palavra alternada */
+}
+
+#palavra-alternada {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-conteudo-titulo);
+    font-weight: bold; /* Negrito */
+    font-size: 4; /* Aumente o tamanho da fonte para 2em */
+    }
+
+/* Garantir que o container não tenha padding */
+.container-fluid {
+    padding: 0;
+    position: relative;
+}
+
+/* Estilo para a linha */
+.row {
+    margin: 0;
+}
+
+
+/* Estilo Soluções */
+
+.secao_solucoes{
+    background-image: url('../img/backgroud_solucao.png'); /* Caminho da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir a seção inteira */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+}
+
+.solucoes {
+    display: flex; /* Define o layout como flexível para organizar os itens */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os cards na horizontal */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px; /* Espaçamento interno opcional */
+}
+
+.titulo_solucoes{
+    color: var(--cor-primaria); /* Define a cor do texto do título */
+    margin-top: 20px; /* Adiciona um espaçamento de 20px acima do título */
+    margin-left: 20px; /* Adiciona um espaçamento externo */
+    font-family: var(--fonte-conteudo-titulo); /* Define a fonte do título */
+    font-size: 2.25rem; /* Define o tamanho da fonte do título */
+    }
+
+.subtitulo_solucoes{
+    color: var(--cor-secundaria); /* Define a cor do texto do subtítulo */
+    font-family: var(--fonte-conteudo-texto); /* Define a fonte do subtítulo */
+    font-weight: bold; /* Define o texto do subtítulo como negrito */
+    font-size: 2.25rem;  /* Define o tamanho da fonte do subtítulo */
+    margin-left: 40px; /* Adiciona um espaçamento externo ao redor dos cards */
+}
+
+.card_text{
+    color: var(--cor-primaria);  /* Define a cor do texto dos cards*/
+    font-family: var(--fonte-conteudo-texto); /* Define a fonte do texto */
+    font-weight: bold; /* Define o texto dos cards como negrito */
+    font-size: 1rem; /* Define o tamanho da fonte do texto dos cards */
+    text-align: center;  /* Centraliza o texto dentro do card */
+}
+
+.solucoes .card {
+    position: relative; /* Define a posição como relativa para permitir o posicionamento absoluto de elementos filhos */
+    width: 250px; /* Define a largura dos cards */
+    height: 200px; /* Define a altura dos cards */
+    perspective: 1000px; /* Adiciona uma perspectiva para o efeito 3D do flip */
+    margin: 20px; /* Adiciona um espaçamento externo ao redor dos cards */
+}
+
+.solucoes .card-inner {
+    position: relative; /* Define a posição como relativa para permitir o posicionamento absoluto de elementos filhos */
+    width: 100%; /* Define a largura como 100% do card */
+    height: 100%; /* Define a altura como 100% do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+    transition: transform 0.6s; /* Define a transição para o efeito de flip */
+    transform-style: preserve-3d; /* Mantém o efeito 3D durante a transformação */
+}
+
+.solucoes .card:hover .card-inner {
+    transform: rotateY(180deg); /* Gira o card em 180 graus no eixo Y quando é passado o mouse sobre ele */
+}
+
+.solucoes .card-front,
+.solucoes .card-back {
+    position: absolute; /* Permite o posicionamento das faces frontal e traseira sobrepostas */
+    width: 100%; /* Define a largura como 100% do card */
+    height: 100%; /* Define a altura como 100% do card */
+    -webkit-backface-visibility: hidden; /* Oculta a face traseira quando o card é virado (Safari) */
+    backface-visibility: hidden; /* Oculta a face traseira quando o card é virado */
+    display: flex;  /* Define o layout flexível para os conteúdos internos */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: center; /* Alinha horizontalmente os itens no centro */
+    color: white;  /* Define a cor do texto como branca */
+    border-radius: 10px; /* Define bordas arredondadas nos cards */
+    padding: 10px; /* Adiciona espaçamento interno aos cards */
+    box-sizing: border-box; /* Inclui o padding e bordas no cálculo total da largura e altura */
+}
+
+.solucoes .card-front {
+    background-color: var(--cor-secundaria); /* Define a cor de fundo da face frontal do card */
+    flex-direction: column; /* Organiza o conteúdo da face frontal em coluna */
+}
+
+.solucoes .card-front img {
+    width: 50px; /* Define a largura da imagem na face frontal */
+    height: 50px; /* Define a altura da imagem na face frontal */
+    margin-bottom: 10px; /* Adiciona um espaçamento abaixo da imagem */
+}
+
+.solucoes .card-back {
+    background-color: white; /* Define a cor de fundo da face traseira do card */
+    color: #0000FF; /* Define a cor do texto da face traseira como azul */
+    transform: rotateY(180deg); /* Gira a face traseira para que apareça ao virar o card */
+    text-align: left; /* Alinha o texto à esquerda na face traseira */
+}
+
+.botao-container {
+    display: flex; /* Define o layout flexível para centralizar o botão */
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    margin-top: 20px; /* Espaçamento acima do botão */
+}
+
+.btn-saiba-mais {
+    background-color: var(--cor-secundaria); /* Define a cor de fundo do botão */
+    color: #ffffff; /* Define a cor do texto como branco */
+    padding: 10px 20px; /* Espaçamento interno do botão (10px vertical e 20px horizontal) */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    font-size: 1.25rem; /* Define o tamanho da fonte */
+    cursor: pointer; /* Altera o cursor para pointer ao passar o mouse */
+    transition: transform 0.3s ease; /* Adiciona transição suave para transformação */
+}
+
+.btn-saiba-mais:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+}
+
+/* Adicionando estilos para a página Sobre Nós */
+/* Estilos para a seção História */
+.historia {
+    padding: 50px 0; /* Adiciona 50 pixels de padding acima e abaixo da seção, sem padding nas laterais */
+    position: relative; /* Define a posição relativa para que os elementos internos possam ser posicionados absolutamente em relação a esta seção, se necessário */
+    text-align: center; /* Centraliza o texto e elementos filhos dentro da seção */
+}
+
+/* Estilo para a faixa de transição */
+.faixa-transicao {
+    background: linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria)); /* Cria um fundo com gradiente linear que vai da cor secundária à cor primária da esquerda para a direita */
+    color: var(--cor-branca); /* Define a cor do texto como branca */
+    border-radius: 10px; /* Adiciona bordas arredondadas de 10 pixels aos cantos da faixa */
+    display: inline-block; /* Faz com que o elemento se ajuste ao tamanho do seu conteúdo e permita que outros elementos fiquem ao lado dele, se necessário */
+    font-family: var(--fonte-conteudo-titulo); /* Define a fonte usada no texto como a fonte específica para títulos */
+    font-size: 2rem; /* Define o tamanho da fonte como 2 vezes o tamanho da fonte base */
+    padding: 10px 20px;
+}
+
+/* Estilo para o texto informativo */
+.texto-informativo h2 {
+    color: var(--cor-secundaria); /* Define a cor do texto como a cor secundária */
+    font-family: var(--fonte-conteudo-titulo); /* Define a fonte usada no título como a fonte específica para títulos */
+    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes o tamanho da fonte base */
+    margin-bottom: 20px; /* Adiciona 20 pixels de margem abaixo do título para separar do conteúdo abaixo */
+    margin-top: 20px; /* Adiciona 20 pixels de margem acima do parágrafo para separar do conteúdo acima */
+}
+
+.texto-informativo p {
+    color: var(--cor-secundaria); /* Define a cor do texto como a cor secundária */
+    font-family: var(--fonte-conteudo-texto); /* Define a fonte usada no texto como a fonte específica para o corpo do texto */
+    font-size: 1rem; /* Define o tamanho da fonte como o tamanho base da fonte */
+    max-width: 800px; /* Define a largura máxima do parágrafo como 800 pixels para evitar que o texto fique muito largo */
+    margin: 0 auto; /* Centraliza o parágrafo horizontalmente dentro do seu contêiner pai */
+    margin-top: 20px; /* Adiciona 20 pixels de margem acima do parágrafo para separar do conteúdo acima */
+}
+
+
+
+/* Estilos para o rodapé */
+footer {
+    font-family: var(--fonte-conteudo-texto); /* Montserrat, sans-serif */
+}
+
+.rodape-primeira-parte {
+    background-color: var(--cor-terciaria); /* Cor terciária */
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.coluna-empresa,
+.coluna-paginas,
+.coluna-siga-nos {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center; /* Centraliza o texto dentro das colunas */
+}
+
+.logo-empresa {
+    max-width: 150px; /* Ajuste conforme necessário */
+}
+
+.slogan {
+    font-size: 0.9rem; /* Ajuste conforme necessário */
+    color: var(--cor-secundaria); /* Branco */
+    margin-top: 10px;
+}
+
+.coluna-paginas h4,
+.coluna-siga-nos h4 {
+    color: var(--cor-secundaria); /* Branco */
+    margin-bottom: 10px;
+}
+
+.coluna-paginas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.coluna-paginas ul li {
+    margin-bottom: 10px;
+}
+
+.coluna-paginas ul li a {
+    color: var(--cor-secundaria); /* Branco */
+    text-decoration: none;
+}
+
+.coluna-siga-nos .icone-instagram img {
+    width: 24px; /* Tamanho do ícone */
+    height: auto; /* Mantém a proporção do ícone */
+}
+
+.coluna-siga-nos p,
+.coluna-siga-nos a {
+    color: var(--cor-secundaria); /* Branco */
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.coluna-siga-nos .fale-conosco {
+    color: var(--cor-secundaria); /* Branco */
+    text-decoration: underline;
+}
+
+.rodape-segunda-parte {
+    background-color: var(--cor-secundaria); /* Cor secundária */
+    color: var(--cor-branca); /* Branco */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    font-size: 0.8rem; /* Fonte pequena */
+}
+
+.coluna-direitos,
+.coluna-politica,
+.coluna-desenvolvedor {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center; /* Centraliza o texto dentro das colunas */
+}
+
+.coluna-politica a,
+.coluna-desenvolvedor p {
+    color: var(--cor-branca); /* Branco */
+    text-decoration: none;
+}
+
+.coluna-politica a:hover {
+    text-decoration: underline;
+}
